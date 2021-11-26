@@ -152,9 +152,11 @@ a{
 
 .box{
     display: block;
+    
     max-width: 320px;
     background-color: #fff;
     border: 1px solid #fff;
+    border-radius: 10px;
     transform: translateY(0px);
     transition: .5s;
     position: relative;
@@ -163,6 +165,7 @@ a{
     width: 100%;
     vertical-align: middle;
     border: 0px;
+    border-radius: 10px;
 }
 .box h2{
     border-bottom: 1px solid #333;
@@ -203,10 +206,13 @@ a{
 }
 .box:hover .text{
     background-image: linear-gradient(0deg, #FB8076, #FEB85D);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .box:hover h2{
     color: #fff;
     border-bottom-color: #fff;
+    
 }
 .box:hover p{
     color: #fff;
@@ -223,13 +229,22 @@ a{
         border: 3px solid red;
 }
 
+/* container */
+@media screen (min-width: 1200px){
+    color: red;
+}
 
+
+ /* align  */
 
 .d-flex{
     display: flex;
+}
+.justify-content-evenly {
     justify-content: space-evenly;
 }
 
+/* distanse */
 .mb-5 {
     margin-bottom: 42px;
 }
