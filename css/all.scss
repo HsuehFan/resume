@@ -27,11 +27,12 @@
         content: '';
         display: block;
         width: 100%;
-
-        clear: both;
     }
     &:nth-of-type(2)::after{
-        height: 120px;
+        clear: both;
+        @include pc {
+            padding-bottom: 160px;
+        }
     }
     &:last-of-type{
         padding-bottom: 32px;
@@ -115,7 +116,7 @@ a{
         position: relative;
         &::before{
             position: absolute;
-            content:"";
+            content: '';
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -126,7 +127,7 @@ a{
             margin: auto;
         }
         &:last-of-type::after{
-            height: 50%;
+            height: 100%;
         }
         &:nth-of-type(odd){
             float: left;
@@ -136,7 +137,7 @@ a{
                 position: absolute;
                 top: 0;
                 width: 1px;
-                height: 112%;
+                height: 100%;
                 background-color: #ccc;
                 right: 0;
                 z-index: -1;
@@ -144,10 +145,10 @@ a{
             &::before {
                 right: -9px;
             }
-            & h2::after{
+            & h3::after{
                 right: 0;
             }
-            & h2:hover:after{
+            & h3:hover:after{
                 right: 0;
             }
         }
@@ -158,14 +159,13 @@ a{
             &:before{
                 left: -10px
             }
-            & h2:after{
+            & h3:after{
                 left: 0;
             }
         }
     }
     & a{
         display: inline-block;
-        text-decoration: none;
         background-color: #fff;
         border: 1px solid #aaa;
         box-sizing: border-box;
@@ -177,12 +177,15 @@ a{
             /* transform: scale(1.05); */
             transition-duration: 0.8s ;
             box-shadow: 5px 5px 5px #888;
-            & h2, p{
+            & h3, p{
                 color: #fff;
+            }
+            & p{
+                font-size: 18px;
             }
         }
     }
-    & h2{
+    & h3{
         color: #333;
         font-family: 'Noto Sans TC', sans-serif;
         font-weight: 700;
@@ -198,6 +201,88 @@ a{
         }
     }
     & p {
+        font-size: 18px;
+        color: #666;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+}
+
+.timeline2 {
+    padding: 30px 0 30px;
+    & li{
+        margin: 0 auto;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 20px 0;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #aaa;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: -80px;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #ccc;
+            left: -70px;
+            z-index: -1;
+        }
+
+        &:last-of-type::after{
+            height: 50%;
+        }
+        
+    }
+    & a{
+        display: inline-block;
+        background-color: #fff;
+        border: 1px solid #aaa;
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px #888;
+        &:hover {
+            background-color: #6fa5f6;
+            /* transform: scale(1.05); */
+            transition-duration: 0.8s ;
+            box-shadow: 5px 5px 5px #888;
+            & h3, p{
+                color: #fff;
+            }
+            & p{
+                font-size: 18px;
+            }
+        }
+    }
+    & h3{
+        color: #333;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 700;
+        &::after{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 70px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            left: -70px;
+            margin: auto;
+        }
+    }
+    & p {
+        font-size: 18px;
         color: #666;
         font-family: 'Noto Sans TC', sans-serif;
     }
