@@ -39,7 +39,7 @@
         padding-bottom: 0px;
         margin-bottom: 0px;
     @include pc {
-        margin-bottom: 300px;
+        margin-bottom: 0px; //有工作經經的情況下，改為 300px;
         border-bottom: 0px solid transparent;
         }
     }   
@@ -167,7 +167,7 @@ $linkColor: #F0BEED;
                 position: absolute;
                 top: 0;
                 width: 1px;
-                height: 100%;
+                height: 120%;
                 background-color: $linkColor;
                 right: 0;
                 z-index: -1;
